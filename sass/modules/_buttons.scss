@@ -1,0 +1,27 @@
+@import "../variables.scss";
+@import "../mixins/mixins.scss";
+
+.btn-default{
+	width: $btn-width;
+	height: $btn-height;
+	font-size: $font-size-base;
+	border: 2px solid $color-blue;
+	@include border-radius(4px);
+	font-weight: $font-weight-middle;
+    text-align: center;
+    text-align-last: center;
+    line-height: 44px;
+    color: $color-blue;	
+    background-color: white;
+
+    &:hover{
+    	cursor: pointer;
+	    color: white;	
+    	background-color: $color-blue;
+    }
+}
+
+.btn-center{
+	display: block;
+    margin: 0 auto;
+}

@@ -1,0 +1,101 @@
+@import "../variables.scss";
+@import "../mixins/mixins.scss";
+
+.card-container{
+	width: 100%;
+	margin: 60px auto 0;
+	padding-right: $grid-gutter-width/2;
+	padding-left: $grid-gutter-width/2;
+	@include display-flex();
+	@include flex-direction(row);
+	@include justify-content-center();
+
+	@media screen and (max-width: $media-tablet){
+		width:calc(100% - 40px);
+	}
+
+	@media screen and (max-width: $media-mobile){
+		@include flex-direction(column);
+	}
+}
+
+.card-panel{
+	width: 100%;
+	min-height: 420px;
+	padding-bottom: 20px;
+	margin-right: $grid-gutter-width/2;
+	background-color: white;
+	text-align-last: left;
+	text-align: left;
+	@include border-radius(4px);
+
+	&:last-child{
+		margin-right: 0;
+	}
+
+	.divider{
+		height: 3px;
+    	background-color: $color-blue;
+    	width: 100px;
+    	margin: 0 auto;
+	}
+
+	@media screen and (max-width: $media-mobile){
+		width: 100%;
+		min-height: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+}
+
+.panel-header{
+	background-color: $color-blue;
+	height: 30px;
+	@include border-top-radius(4px);
+    padding-top: 10px;	
+
+	.panel-type{
+		font-weight: $font-weight-middle;
+	    font-size: $font-size-base;
+	    margin-bottom: 0;
+	    text-align: center;
+	    text-align-last: center;
+	    color: white;
+	}
+}
+
+.card-panel-content{
+	padding: 20px;
+    height: 85%;
+	@include display-flex();
+	@include flex-wrap();
+
+	.panel-price-row{
+		width: 100%;
+	}
+
+	.panel-price{
+	    margin-bottom: 20px;
+	    text-align: center;
+	    text-align-last: center;
+	    font-size: 38px;
+	    font-weight: 300;
+	    width: 100%;
+
+		.monthly{
+			font-size: $font-size-small;
+			display: block;
+			font-weight: $font-weight-heaviest;
+			padding-top: 5px;
+		}	
+	}
+
+	.panel-list{
+		width: 100%;
+	}
+
+	.btn-default{
+		align-self: flex-end;
+	}
+}
+

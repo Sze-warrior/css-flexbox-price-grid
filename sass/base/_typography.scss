@@ -1,0 +1,23 @@
+@import "variables.scss";
+
+h2{
+	margin-top: 0;
+	font-size: $font-size-h2-desktop;
+	margin-bottom: 20px;
+	font-weight: $font-weight-light;
+	color: black;
+
+	@media screen and (max-width: $media-mobile){
+		font-size: $font-size-h2-mobile;
+	}
+}
+
+h3{
+	margin-top: 0;
+	color: black;	
+}
+
+ul {
+	padding-left: $grid-gutter-width/2;
+	line-height: $line-height-base;
+}

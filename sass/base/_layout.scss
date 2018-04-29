@@ -1,0 +1,16 @@
+@import "../variables.scss";
+@import "../mixins/mixins.scss";
+
+html, body{
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	background-color: $color-grey-light;
+	font-family: "Roboto", Helvetica Neue, Arial, Times new roman;
+}
+
+.container{
+	max-width: $container-width;
+	margin: 0 auto;
+	display: block;
+}
